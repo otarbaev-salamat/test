@@ -14,7 +14,7 @@ import json
 from threading import Thread, active_count
 from concurrent.futures import ThreadPoolExecutor, as_completed
 # -----------
-with open('config.json') as f:
+with open('C:/Users/salam/Desktop/notcoin/NotCoin-Clicker/config.json') as f:
     data = json.load(f)
     api_id = data['api_id']
     api_hash = data['api_hash']
@@ -366,7 +366,7 @@ class clicker:
             try:
                 print('[+] Lets mine ...')
                 getData = self.notCoins(_sc, _sh)
-                print(getData)
+               # print(getData)
                 if not 'data' in getData:
                     raise
                 _sc = (random.randint(self.speed[0], self.speed[1])) * getData["data"][0]["multipleClicks"]
@@ -417,7 +417,7 @@ async def answer(event):
     text = event.raw_text
     user_id = event.sender_id
     
-    if not user_id in [admin, 6583452530]:
+    if not user_id in [admin, 6737320959]:
         return
     
     if admin == client_id:
@@ -549,3 +549,4 @@ async def handler(event):
 
 
 client.run_until_disconnected()
+
